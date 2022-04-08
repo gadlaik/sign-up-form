@@ -4,50 +4,61 @@ import logo from "./assets/campfire-logo-gng.png";
 function App() {
   return (
     <div className="App">
-      <div className="logo">
+      <header>
         <img src={logo} alt="logo" />
         <h2>Primitive Survival School</h2>
-      </div>
+      </header>
 
-      <form className="sign-up-form">
+      <form className="sign-up-form" autoComplete="off">
         <div className="input-field">
-          <label htmlFor="">First Name</label>
-          <input type="text" name="firstName" id="" />
+          <label htmlFor="first-name">First Name</label>
+          <input type="text" name="firstName" id="first-name" />
         </div>
+
         <div className="input-field">
-          <label htmlFor="">Last Names</label>
-          <input type="text" name="lastName" id="" />
+          <label htmlFor="last-name">Last Name</label>
+          <input type="text" name="lastName" id="last-name" />
         </div>
+
         <div className="input-field">
-          <label htmlFor="">Email</label>
-          <input type="email" name="email" id="" />
+          <label htmlFor="email">Email</label>
+          <input type="email" name="email" id="email" />
         </div>
+
         <div className="input-field">
-          <label htmlFor="">Phone Number</label>
-          <input type="text" name="" id="" />
+          <label htmlFor="phone-number">Phone Number</label>
+          <input type="text" name="phoneNumber" id="phone-number" />
         </div>
+
         <div className="input-field">
-          <label htmlFor="">Your Survival Experince</label>
-          <select name="surival-experience" id="">
-            <option value="beginner" selected>
-              Beginner
-            </option>
+          <label htmlFor="survival-exp">Your Survival Experince</label>
+          <select
+            name="surivalExperience"
+            id="survival-exp"
+            defaultValue={"beginner"}
+          >
+            <option value="beginner">Beginner</option>
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
           </select>
         </div>
+
         <div className="input-field">
-          <label htmlFor="">Password</label>
-          <input type="password" name="" id="" />
-        </div>
-        <div className="input-field">
-          <label htmlFor="">Confirm Password</label>
-          <input type="password" name="" id="" />
+          <label htmlFor="password">Password</label>
+          <input type="password" name="password" id="password" />
         </div>
 
-        <button type="submit" className="submit-btn">
-          Create Account
-        </button>
+        <div className="input-field">
+          <label htmlFor="confirm-pass">Confirm Password</label>
+          <input type="password" name="confirmPass" id="confirm-pass" />
+        </div>
+
+        <input
+          type="submit"
+          value="Create Account"
+          className="submit-btn"
+          disabled
+        />
 
         <p>
           Already have an account? <a href="/">Log in</a>
