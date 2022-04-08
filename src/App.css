@@ -13,6 +13,10 @@
   position: relative;
 }
 
+.show {
+  display: block !important;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -57,6 +61,7 @@ header h2 {
   opacity: 0.85;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
+  font-size: 15px;
 }
 
 .input-field label {
@@ -80,13 +85,19 @@ header h2 {
   border-radius: 6px;
   cursor: pointer;
   margin-top: 24px;
+  font-size: 15px;
+}
+.submit-btn {
+  background-color: #597d48;
+  transition-duration: 180ms;
 }
 .submit-btn:hover {
-  background-color: #598d48;
+  box-shadow: 0px 0px 5px white;
+  transform: scale(.985);
 }
 .submit-btn:disabled:hover {
   cursor: default;
-  background-color: #597d48;
+  box-shadow: none;
 }
 
 p {
@@ -113,6 +124,14 @@ footer {
 
 footer p {
   margin: auto;
+}
+
+.pass-warning {
+  color: red;
+  font-style: italic;
+  display: none;
+  margin: 0;
+  font-size: 13px;
 }
 
 @media screen and (min-width: 720px) {
