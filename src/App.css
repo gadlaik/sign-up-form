@@ -1,38 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
 .App {
+  color: white;
+  background-image: url(./assets/form-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 52%;
+  height: max(100vh, 720px);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  position: relative;
+}
+
+.logo {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+width: 100%;
+padding: 12px 0;
+background-color: rgba(0, 0, 0, 0.4);
+}
+.logo img{
+  height: 75px;
+  width: 75px;
+}
+.logo h2 {
+  text-shadow: 0px 0px 2px skyblue;
+  letter-spacing: 1.5px;
+  font-family: 'MedievalSharp', cursive;
+  margin: 0;
   text-align: center;
+  width: 225px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form */
+.sign-up-form {
+  padding-left: 12px;
+  padding-top: 33px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-field {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 185px;
+  margin-bottom: 6px;
+}
+
+.input-field input, select {
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 128, 0, 0.5);
+  outline: none;
+}
+
+.input-field label {
+  margin-left: 3px;
+}
+
+.input-field input {
+  opacity: 0.75;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+.input-field input:focus, .input-field select:focus {
+  border-color: skyblue;
+  box-shadow: inset 0px 0px 2px skyblue;
+  opacity: 1;
+}
+
+.submit-btn {
+  background-color: #596D48;
+  border: none;
+  padding: 12px;
   color: white;
+  font-weight: bold;
+  width: 175px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+.submit-btn.submit-btn:hover {
+background-color: #597D48;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  width: 200px;
+  text-shadow: 1px 2px 2px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a {
+  color: white;
+  font-weight: bold;  
+}
+a:hover {
+  color: #ddd;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  position: absolute;
+  bottom: 10px;
+}
+
+footer p {
+  margin: auto;
+}
+
+@media screen and (min-width: 720px) {
+  .logo{
+    height: 74px;
   }
-  to {
-    transform: rotate(360deg);
+  .logo img {
+    position: absolute;
+    left: 33px;
+  }
+  .logo h2 {
+    width: 480px;
+    font-size: 36px;
+  }
+  .sign-up-form {
+    padding-left: 33px;
   }
 }
