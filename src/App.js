@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <header>
         <img src={logo} alt="logo" />
-        <h2>Primitive Survival School</h2>
+        <h1>Primitive Survival School</h1>
       </header>
 
       <form className="sign-up-form" autoComplete="off" onSubmit={handleSubmit}>
